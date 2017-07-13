@@ -1,0 +1,24 @@
+/* COLORS */
+/* FONTS */
+/* Default Overrides */
+h1 {
+  margin: 0;
+}
+/* STYLES */
+body {
+  background-color: #55294A;
+}
+.grid {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.home-content {
+  margin-top: 400px;
+  margin-left: 15%;
+}
+h1 {
+  color: #181818;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 120px;
+  line-height: 88%;
+}
