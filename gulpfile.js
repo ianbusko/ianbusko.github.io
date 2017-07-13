@@ -36,8 +36,9 @@ gulp.task('minify-css', ['build'], function () {
 
 gulp.task('serve', ['build', 'minify-css'], function () {
     var options = {
-        proxy: 'localhost:' + 5000,
-        port: 5000,
+				server: {
+					baseDir: './'
+				},
         files: [
             'assets/less/*.less'
         ],
