@@ -153,6 +153,8 @@ p {
 }
 .grid > *:not(:last-child) {
   margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .portrait {
   background-image: url(../images/ian3_small.jpg);
@@ -162,4 +164,10 @@ p {
   border-radius: 50%;
   height: 300px;
   width: 300px;
+}
+@media (max-width: 480px) {
+  .portrait {
+    height: 250px;
+    width: 250px;
+  }
 }
