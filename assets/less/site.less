@@ -127,6 +127,36 @@ section{
   }
 }
 
+nav{
+	display:flex;
+	justify-content: center;
+	padding: 2em 0;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	a{
+		margin: 0 1em;
+	}
+	a:first-child{
+		margin:0 1em 0 0;
+	}
+	a:last-child{
+		margin: 0 0 0 1em;
+	}
+}
+
+nav{
+	a{
+		color: @BoldFontColor;
+		font-size:1.5em;
+		font-family: @BoldFont;
+		text-decoration: none;
+		font-weight:700;
+	}
+}
+
+
 .portrait{
   background-image:url(../images/ian3_small.jpg);
   background-size:cover;

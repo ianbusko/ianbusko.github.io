@@ -175,6 +175,35 @@ section {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+nav a {
+  margin: 0 1em;
+}
+nav a:first-child {
+  margin: 0 1em 0 0;
+}
+nav a:last-child {
+  margin: 0 0 0 1em;
+}
+nav a {
+  color: #111111;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+}
 .portrait {
   background-image: url(../images/ian3_small.jpg);
   background-size: cover;
