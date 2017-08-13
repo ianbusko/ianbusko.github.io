@@ -99,18 +99,26 @@ section{
 
 .splash-text{
 	align-self: baseline;
-	margin-top:2em;
+	margin-left: 10%;
+	margin-top: 15%;
 }
 
 .splash-text{
-	font-family: @BoldFont;
-	font-size: 100px;
-	font-weight: 900;
+	h1{
+		font-family: @BoldFont;
+		font-size: 100px;
+		font-weight: 900;
+	}
+
+	p{
+		font-family: @NormalFont;
+		font-size:1em;
+	}
 }
 
 .splash-grid{
 	box-sizing: border-box;
-	padding: 10rem 10rem;
+	// padding: 10rem 10rem;
 }
 
 .grid{
@@ -153,6 +161,37 @@ nav{
 		font-family: @BoldFont;
 		text-decoration: none;
 		font-weight:700;
+		position:relative;
+
+		&:after{
+			background-color: @BoldFontColor;
+			box-sizing: border-box;
+			content: '';
+			display:block;
+			height:.125em;
+			margin-top:.125em;
+			position:absolute;
+			// bottom:0;
+			top:100%;
+			width:100%;
+			// top:0;
+		}
+	}
+
+	a{
+		&:after{
+			opacity:0;
+			transform: translateY(5px);
+			transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+			// will-change:opacity, transform;
+		}
+	}
+
+	a:hover{
+		&:after{
+			opacity:1;
+			transform: translateY(0);
+		}
 	}
 }
 

@@ -182,6 +182,7 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
   padding: 2em 0;
   position: fixed;
   top: 0;
@@ -203,6 +204,31 @@ nav a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   font-weight: 700;
+  position: relative;
+}
+nav a:after {
+  background-color: #111111;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  height: .125em;
+  margin-top: .125em;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+nav a:after {
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  transition: opacity 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+nav a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .portrait {
   background-image: url(../images/ian3_small.jpg);
