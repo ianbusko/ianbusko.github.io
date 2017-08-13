@@ -143,7 +143,6 @@ section {
   -webkit-align-self: baseline;
       -ms-flex-item-align: baseline;
           align-self: baseline;
-  margin-left: 10%;
   margin-top: 15%;
 }
 .splash-text h1 {
@@ -157,6 +156,8 @@ section {
 }
 .splash-grid {
   box-sizing: border-box;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 .grid {
   -webkit-align-items: center;
