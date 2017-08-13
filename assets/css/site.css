@@ -161,15 +161,11 @@ section {
 }
 .splash-portrait {
   background-color: #101010;
-  background-image: url(../images/ian1.jpg);
+  background-image: url(../images/ian-banner.jpg);
   background-size: cover;
-  background-position: center;
-  background-position-y: center;
-  background-position-x: 66%;
-  background-size: 200vh;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
