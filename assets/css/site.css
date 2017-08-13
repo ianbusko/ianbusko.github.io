@@ -144,16 +144,20 @@ section {
   -webkit-align-self: baseline;
       -ms-flex-item-align: baseline;
           align-self: baseline;
-  margin-top: 2em;
+  margin-left: 10%;
+  margin-top: 15%;
 }
-.splash-text {
+.splash-text h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 100px;
   font-weight: 900;
 }
+.splash-text p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
 .splash-grid {
   box-sizing: border-box;
-  padding: 10rem 10rem;
 }
 .grid {
   -webkit-align-items: center;
@@ -182,7 +186,6 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
   padding: 2em 0;
   position: fixed;
   top: 0;
