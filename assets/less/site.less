@@ -74,22 +74,43 @@ body, html{
 }
 
 body{
-  background-color: @purple;
+  background-color: @SlideColor;
 }
 
 h1, p{
-  color:@lightBlue;
+  color:@TextColor;
 }
 
 h1{
-    font-family: @montserrat;
+    font-family: @BoldFont;
     font-size: 100px;
+		font-weight: 900;
 }
 
 p{
-    font-family: @raleway;
+    font-family: @NormalFont;
     line-height: 1.5em;
     max-width:50%;
+}
+
+section{
+	height: 100vh;
+}
+
+.splash-text{
+	align-self: baseline;
+	margin-top:2em;
+}
+
+.splash-text{
+	font-family: @BoldFont;
+	font-size: 100px;
+	font-weight: 900;
+}
+
+.splash-grid{
+	box-sizing: border-box;
+	padding: 10rem 10rem;
 }
 
 .grid{

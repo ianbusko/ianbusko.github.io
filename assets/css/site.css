@@ -121,20 +121,39 @@ html {
   height: 100%;
 }
 body {
-  background-color: #55294A;
+  background-color: #ffffff;
 }
 h1,
 p {
-  color: #CADEE6;
+  color: #111111;
 }
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 100px;
+  font-weight: 900;
 }
 p {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5em;
   max-width: 50%;
+}
+section {
+  height: 100vh;
+}
+.splash-text {
+  -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
+  margin-top: 2em;
+}
+.splash-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+}
+.splash-grid {
+  box-sizing: border-box;
+  padding: 10rem 10rem;
 }
 .grid {
   -webkit-align-items: center;
