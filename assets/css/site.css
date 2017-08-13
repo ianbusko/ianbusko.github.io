@@ -125,7 +125,7 @@ body {
 }
 h1,
 p {
-  color: #111111;
+  color: #101010;
 }
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -158,6 +158,22 @@ section {
   box-sizing: border-box;
   max-width: 1250px;
   margin: 0 auto;
+}
+.splash-portrait {
+  background-color: #101010;
+  background-image: url(../images/ian1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  background-position-x: 66%;
+  background-size: 200vh;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 25%;
 }
 .grid {
   -webkit-align-items: center;
@@ -203,7 +219,7 @@ nav a:last-child {
   margin: 0 0 0 1em;
 }
 nav a {
-  color: #111111;
+  color: #101010;
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
@@ -211,7 +227,7 @@ nav a {
   position: relative;
 }
 nav a:after {
-  background-color: #111111;
+  background-color: #101010;
   box-sizing: border-box;
   content: '';
   display: block;

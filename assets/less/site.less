@@ -3,11 +3,11 @@
 @blue: #62AFC9;
 @lightBlue: #CADEE6;
 @red: #E44026;
-@black: #181818;
+@black: #101010;
 
 @SlideColor: #ffffff;
-@BoldFontColor: #111111;
-@TextColor: #111111;
+@TextColor: @black;
+@BoldFontColor: @black;
 
 /* FONTS */
 @raleway: 'Raleway', sans-serif;
@@ -122,6 +122,24 @@ section{
 	// max-width:1400px;
 	max-width:1250px;
 	margin:0 auto;
+}
+
+.splash-portrait{
+	background-color: @black;
+	background-image: url(../images/ian1.jpg);
+	background-size:cover;
+	background-position:center;
+
+	background-position-y: center;
+    background-position-x: 66%;
+    background-size: 200vh;
+	filter: grayscale(100%);
+
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:25%;
 }
 
 .grid{
