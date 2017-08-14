@@ -1,18 +1,10 @@
 /* COLORS */
-@purple: #55294A;
-@blue: #62AFC9;
-@lightBlue: #CADEE6;
-@red: #E44026;
 @black: #101010;
-
 @SlideColor: #ffffff;
 @TextColor: @black;
 @BoldFontColor: @black;
 
 /* FONTS */
-@raleway: 'Raleway', sans-serif;
-@montserrat: 'Montserrat', sans-serif;
-
 @BoldFont: 'Montserrat', sans-serif;
 @NormalFont: 'Raleway', sans-serif;
 
@@ -48,24 +40,6 @@ body {
 ol, ul {
 	list-style: none;
 }
-// blockquote, q {
-// 	quotes: none;
-// }
-// blockquote:before, blockquote:after,
-// q:before, q:after {
-// 	content: '';
-// 	content: none;
-// }
-// table {
-// 	border-collapse: collapse;
-// 	border-spacing: 0;
-// }
-
-
-/* Default Overrides */
-h1{
-  margin: 0;
-}
 
 /* STYLES */
 body, html{
@@ -88,9 +62,9 @@ h1{
 }
 
 p{
-    font-family: @NormalFont;
-    line-height: 1.5em;
-    // max-width:50%;
+	font-family: @NormalFont;
+	font-size: 1em;
+  line-height: 1.5em;
 }
 
 section{
@@ -99,29 +73,7 @@ section{
 
 .splash-text{
 	align-self: baseline;
-	// margin-left: 10%;
 	margin-top: 15%;
-}
-
-.splash-text{
-	h1{
-		font-family: @BoldFont;
-		font-size: 100px;
-		font-weight: 900;
-	}
-
-	p{
-		font-family: @NormalFont;
-		font-size:1em;
-	}
-}
-
-.splash-grid{
-	box-sizing: border-box;
-	// padding: 10rem 10rem;
-	// max-width:1400px;
-	max-width:1250px;
-	margin:0 auto;
 }
 
 .splash-portrait{
@@ -138,10 +90,13 @@ section{
 
 .grid{
   align-items:center;
+	box-sizing: border-box;
   display:flex;
   flex-direction: column;
   height:100%;
   justify-content: center;
+	margin:0 auto;
+	max-width:1250px;
 
   & > *:not(:last-child) {
     margin-bottom:2rem;
@@ -188,10 +143,8 @@ nav{
 			height:.125em;
 			margin-top:.125em;
 			position:absolute;
-			// bottom:0;
 			top:100%;
 			width:100%;
-			// top:0;
 		}
 	}
 
@@ -200,7 +153,6 @@ nav{
 			opacity:0;
 			transform: translateY(5px);
 			transition: opacity 0.2s ease-in, transform 0.2s ease-in;
-			// will-change:opacity, transform;
 		}
 	}
 
@@ -211,104 +163,3 @@ nav{
 		}
 	}
 }
-
-
-.portrait{
-  background-image:url(../images/ian3_small.jpg);
-  background-size:cover;
-  background-position:center;
-  border:2px solid @lightBlue;
-  border-radius:50%;
-  height:300px;
-  width:300px;
-}
-
-@media (max-width:480px){
-	.portrait{
-		height:250px;
-		width:250px;
-	}
-}
-
-
-// .grid{
-//   max-width: 1440px;
-//   margin: 0 auto;
-//   position: relative;
-// }
-//
-// .home-content{
-//   margin-top:150px;
-//   // margin-left:200px;
-//   margin-left: 27%;
-//
-//   p{
-//     // position: absolute;
-//     // bottom:0;
-//     // right:0;
-//   }
-// }
-//
-// h1{
-//   color: @black;
-//   color: @lightBlue;
-//   font-family: @montserrat;
-//   font-size: 120px;
-//   line-height:88%;
-// }
-//
-// p{
-//   color: @lightBlue;
-//   font-family: @raleway;
-//   margin-top:100px;
-//   margin-left:25%;
-//   max-width:50%;
-// }
-//
-// .image-area{
-//   background-image: url(../images/ian2.jpg);
-//   // background-color:@blue;
-//   background-color: #00ff36;
-//
-//   background-size: cover;
-//   background-position: center;
-//   background-blend-mode:multiply;
-//   // filter:grayscale(100%) contrast(1.75);
-//   // mix-blend-mode: multiply;
-//
-//   height:100%;
-//   position:absolute;
-//   top:0;
-//   width:34%;
-// }
-//
-// .image-area{
-//
-// //   &:after{
-// //     background-color: #23278a;
-// // mix-blend-mode: lighten;
-// //   }
-//   // background-color: @purple;
-//   // position: relative;
-//
-//   &:after{
-//     background-color: @lightBlue;
-//     mix-blend-mode: overlay;
-//
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//
-//     background-color: #23278a;
-// mix-blend-mode: lighten;
-//   }
-//   //
-//   // img{
-//   //   height:100%;
-//   //   mix-blend-mode: multiply;
-//   //   filter:grayscale(100%) contrast(1.75);
-//   // }
-// }
