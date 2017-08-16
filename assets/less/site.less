@@ -72,8 +72,9 @@ section{
 }
 
 .splash-text{
-	align-self: baseline;
-	margin-top: 15%;
+	align-self:baseline;
+	position: absolute;
+	bottom:20%;
 }
 
 .splash-portrait{
@@ -94,15 +95,10 @@ section{
   display:flex;
   flex-direction: column;
   height:100%;
-  justify-content: center;
+  justify-content: flex-end;
 	margin:0 auto;
-	max-width:1250px;
-
-  & > *:not(:last-child) {
-    margin-bottom:2rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
-  }
+	max-width:1170px;
+	padding-bottom:20%;
 }
 
 nav{
