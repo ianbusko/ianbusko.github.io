@@ -136,11 +136,15 @@ p {
 section {
   height: 100vh;
 }
+.wrapper {
+  margin-right: 25%;
+}
 .splash-text {
   -webkit-align-self: baseline;
       -ms-flex-item-align: baseline;
           align-self: baseline;
-  margin-top: 15%;
+  position: absolute;
+  bottom: 20%;
 }
 .splash-portrait {
   background-color: #101010;
@@ -153,6 +157,7 @@ section {
   top: 0;
   bottom: 0;
   width: 25%;
+  z-index: -1;
 }
 .grid {
   -webkit-align-items: center;
@@ -165,17 +170,12 @@ section {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 0 auto;
-  max-width: 1250px;
-}
-.grid > *:not(:last-child) {
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  max-width: 800px;
+  padding-bottom: 20%;
 }
 nav {
   display: -webkit-flex;
