@@ -105,6 +105,16 @@ section{
 	bottom:0;
 	width:25%;
 	z-index: -1;
+
+	@media @phone{
+		background-image: url(../images/ian2.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 20%;
+		top:0;
+		left:0;
+		width:100%;
+	}
 }
 
 .grid{
@@ -116,6 +126,10 @@ section{
 	margin:0 auto;
 	max-width:800px;
 	padding-bottom:20%;
+
+	@media @smallScreen, @phone{
+		max-width: 650px;
+	}
 }
 
 nav{
