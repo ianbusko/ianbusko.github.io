@@ -10,13 +10,14 @@
 
 /* Media Queries */
 @phone:~"only screen and (min-width:0px) and (max-width:768px)";
-@smallScreen:~"only screen and (min-width:768px) and (max-width:1200px)";
+@smallScreen:~"only screen and (min-width:769px) and (max-width:1200px)";
 
 @mediumScreen:~"only screen and (min-width: 768px) and (max-width:1440px)";
 @largeScreen:~"only screen and (min-width:1201px)";
 
 /* Constants */
 @mobileImageHeight: 200px;
+@navbarHeight: 88px;
 
 /* Resets */
 html, body, div, span, applet, object, iframe,
@@ -81,8 +82,7 @@ section{
 	height: 100vh;
 	&.splash-grid{
 		@media @phone{
-			// height:100%;
-			height:calc(~"100vh - @ {mobileImageHeight}");
+			height:calc(~"100vh - @{mobileImageHeight} - @{navbarHeight}");
 		}
 	}
 }
@@ -95,12 +95,6 @@ section{
 	}
 }
 
-
-.splash-text{
-	align-self:baseline;
-	position: absolute;
-	bottom:20%;
-}
 
 .splash-portrait{
 	background-color: @black;
@@ -137,7 +131,30 @@ section{
 	@media @smallScreen, @phone{
 		max-width: 650px;
 	}
+
+	@media @phone{
+		display:block;
+		padding: 2em 1em;
+	}
 }
+
+.splash-text{
+	align-self:baseline;
+	position: absolute;
+	bottom:20%;
+	width:420px;
+
+	@media @phone{
+		font-size: 1.25em;
+		position: initial;
+		width:auto;
+
+		h1{
+			font-size: 4em;
+		}
+	}
+}
+
 
 nav{
 	display:flex;
