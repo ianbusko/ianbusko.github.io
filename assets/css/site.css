@@ -1,5 +1,7 @@
 /* COLORS */
 /* FONTS */
+/* Media Queries */
+/* Constants */
 /* Resets */
 html,
 body,
@@ -136,15 +138,18 @@ p {
 section {
   height: 100vh;
 }
+@media only screen and (min-width:0px) and (max-width:768px) {
+  section.splash-grid {
+    height: calc(100vh - 200px - 88px);
+  }
+}
 .wrapper {
   margin-right: 25%;
 }
-.splash-text {
-  -webkit-align-self: baseline;
-      -ms-flex-item-align: baseline;
-          align-self: baseline;
-  position: absolute;
-  bottom: 20%;
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .wrapper {
+    margin-right: 0;
+  }
 }
 .splash-portrait {
   background-color: #101010;
@@ -158,6 +163,16 @@ section {
   bottom: 0;
   width: 25%;
   z-index: -1;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-portrait {
+    background-image: url(../images/ian2.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    position: relative;
+    width: 100%;
+  }
 }
 .grid {
   -webkit-align-items: center;
@@ -176,6 +191,35 @@ section {
   margin: 0 auto;
   max-width: 800px;
   padding-bottom: 20%;
+}
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .grid {
+    max-width: 650px;
+  }
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .grid {
+    display: block;
+    padding: 2em 1em;
+  }
+}
+.splash-text {
+  -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
+  position: absolute;
+  bottom: 20%;
+  width: 420px;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-text {
+    font-size: 1.25em;
+    position: initial;
+    width: auto;
+  }
+  .splash-text h1 {
+    font-size: 4em;
+  }
 }
 nav {
   display: -webkit-flex;
