@@ -266,6 +266,24 @@ section {
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
 }
+/* EXTRA STYLES FOR ANIMATION */
+@media only screen and (min-width: 768px) and (max-width:1440px), only screen and (min-width:1441px) {
+  .wrapper {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+    padding-left: 25%;
+    will-change: transform;
+  }
+}
+.splash-portrait:after:after {
+  -webkit-animation-name: lighten;
+          animation-name: lighten;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  will-change: opacity;
+}
 @-webkit-keyframes slideIn {
   0% {
     -webkit-transform: translateX(0);
@@ -337,22 +355,6 @@ section {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-}
-/* EXTRA STYLES FOR ANIMATION */
-.wrapper {
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
-  padding-left: 25%;
-  will-change: transform;
-}
-.splash-portrait:after:after {
-  -webkit-animation-name: lighten;
-          animation-name: lighten;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  will-change: opacity;
 }
 nav {
   display: -webkit-flex;
