@@ -15,6 +15,8 @@
 @mediumScreen:~"only screen and (min-width: 768px) and (max-width:1440px)";
 @largeScreen:~"only screen and (min-width:1201px)";
 
+/* Constants */
+@mobileImageHeight: 200px;
 
 /* Resets */
 html, body, div, span, applet, object, iframe,
@@ -77,6 +79,12 @@ p{
 
 section{
 	height: 100vh;
+	&.splash-grid{
+		@media @phone{
+			// height:100%;
+			height:calc(~"100vh - @ {mobileImageHeight}");
+		}
+	}
 }
 
 .wrapper{
@@ -110,10 +118,8 @@ section{
 		background-image: url(../images/ian2.jpg);
     background-size: contain;
     background-position: center;
-    height: 20%;
+    height: @mobileImageHeight;
 		position: relative;
-		top:0;
-		left:0;
 		width:100%;
 	}
 }
