@@ -166,8 +166,7 @@ section {
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-portrait {
-    background-image: url(../images/ian2.jpg);
-    background-size: contain;
+    background-image: url(../images/cropped_header.jpg);
     background-position: center;
     height: 200px;
     position: relative;
@@ -185,9 +184,9 @@ section {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   max-width: 800px;
   padding-bottom: 20%;
@@ -199,7 +198,6 @@ section {
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   .grid {
-    display: block;
     padding: 2em 1em;
   }
 }
