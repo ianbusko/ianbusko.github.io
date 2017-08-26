@@ -14,6 +14,7 @@
 
 @mediumScreen:~"only screen and (min-width: 768px) and (max-width:1440px)";
 @largeScreen:~"only screen and (min-width:1441px)";
+@largestScreen:~"only screen and (min-width:1921px)";
 
 /* Constants */
 @mobileImageHeight: 200px;
@@ -97,7 +98,7 @@ section{
 
 .splash-portrait{
 	background-color: @black;
-	background-image: url(../images/ian-banner.jpg);
+	background-image: url(../images/ian-banner-small.jpg);
 	background-size:cover;
 	filter: grayscale(100%);
 	position:fixed;
@@ -107,6 +108,10 @@ section{
 	width:25%;
 	z-index: -1;
 
+	@media @largestScreen{
+		background-image: url(../images/ian-banner.jpg)
+	}
+	
 	@media @phone{
 		background-image: url(../images/cropped_header.jpg);
     background-position: center;

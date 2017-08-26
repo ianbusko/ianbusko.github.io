@@ -153,7 +153,7 @@ section {
 }
 .splash-portrait {
   background-color: #101010;
-  background-image: url(../images/ian-banner.jpg);
+  background-image: url(../images/ian-banner-small.jpg);
   background-size: cover;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -163,6 +163,11 @@ section {
   bottom: 0;
   width: 25%;
   z-index: -1;
+}
+@media only screen and (min-width:1921px) {
+  .splash-portrait {
+    background-image: url(../images/ian-banner.jpg);
+  }
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-portrait {
