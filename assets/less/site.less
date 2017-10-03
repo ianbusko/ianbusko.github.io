@@ -1,5 +1,6 @@
 /* COLORS */
 @black: #101010;
+@white: #ffffff;
 @SlideColor: #ffffff;
 @TextColor: @black;
 @BoldFontColor: @black;
@@ -54,6 +55,11 @@ ol, ul {
 }
 
 /* STYLES */
+:root{
+	--overlayColor:hsl(270, 90%, 50%);
+	--buttonColor: hsl(210, 50%, 50%);
+}
+
 body, html{
   margin:0;
   height:100%;
@@ -97,10 +103,17 @@ section{
 }
 
 .splash-portrait{
-	background-color: @black;
-	background-image: url(../images/ian-banner-small.jpg);
+	// background-color: @black;
+	background-image:url(../images/ian-banner-small-bw.jpg);
 	background-size:cover;
-	filter: grayscale(100%);
+	// background-blend-mode:multiply;
+	background-blend-mode:lighten;
+
+
+	background-color: var(--overlayColor);
+	// background-blend-mode: screen;
+
+	// filter: grayscale(100%);
 	position:fixed;
 	right:0;
 	top:0;
@@ -109,15 +122,22 @@ section{
 	z-index: -1;
 
 	@media @largestScreen{
-		background-image: url(../images/ian-banner.jpg)
+		background-image: url(../images/ian-banner-small-bw.jpg)
 	}
-	
+
 	@media @phone{
-		background-image: url(../images/cropped_header.jpg);
+		background-image: url(../images/cropped_header_bw.jpg);
     background-position: center;
     height: @mobileImageHeight;
 		position: relative;
 		width:100%;
+	}
+
+	&:before, &:after{
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
 	}
 
 	&:after{
@@ -125,11 +145,14 @@ section{
 		animation-duration: 2s;
 		animation-timing-function: ease-in-out;
 		background-color: @black;
-		content: '';
-		height: 100%;
-		width: 100%;
-		opacity: 0;
-		position: absolute;
+		opacity:0;
+		z-index:1;
+	}
+
+	&:before{
+		opacity:0;
+		// background-color: var(--overlayColor);
+		// background-blend-mode: screen;
 	}
 }
 
@@ -158,6 +181,11 @@ section{
 	position: absolute;
 	bottom:20%;
 	width:420px;
+	text-align:center;
+
+	h1{
+		margin-bottom:0.25em;
+	}
 
 	@media @phone{
 		font-size: 1.25em;
@@ -294,5 +322,22 @@ nav{
 			opacity:1;
 			transform: translateY(0);
 		}
+	}
+}
+
+/* CONTACT BUTTON */
+.contact-button{
+	background-color: var(--buttonColor);
+	border-radius: 1.5em;
+	color:@white;
+	display:inline-block;
+	font-family: @BoldFont;
+	padding: 1.5em 2em;
+	text-decoration:none;
+	text-transform:uppercase;
+	transition: transform 0.3s ease-out;
+
+	&:hover{
+		transform:scale(1.03);
 	}
 }
