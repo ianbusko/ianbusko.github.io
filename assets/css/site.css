@@ -436,7 +436,7 @@ nav a:hover:after {
   color: #ffffff;
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
-  padding: 1.5em 2em;
+  padding: 1.5em 3.5em;
   text-decoration: none;
   text-transform: uppercase;
   transition: -webkit-transform 0.3s ease-out;
