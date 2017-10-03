@@ -57,7 +57,7 @@ ol, ul {
 /* STYLES */
 :root{
 	--overlayColor:hsl(210, 90%, 50%);
-	--buttonColor: hsl(270, 90%, 50%);
+	--buttonColor: hsl(210, 50%, 50%);
 }
 
 body, html{
@@ -114,6 +114,8 @@ section{
 	z-index: -1;
 
 	@media @phone{
+		background-color:@black;
+		background-blend-mode:initial;
 		background-image: url(../images/cropped_header_bw.jpg);
     background-position: center;
     height: @mobileImageHeight;
@@ -325,6 +327,10 @@ nav{
 	text-decoration:none;
 	text-transform:uppercase;
 	transition: transform 0.3s ease-out;
+
+	@media @phone{
+		background-color: hsl(253, 50%, 50%);
+	}
 
 	&:hover{
 		transform:scale(1.03);

@@ -115,7 +115,7 @@ ul {
 /* STYLES */
 :root {
   --overlayColor: #0d7ff2;
-  --buttonColor: #7f0df2;
+  --buttonColor: #407fbf;
 }
 body,
 html {
@@ -169,6 +169,8 @@ section {
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-portrait {
+    background-color: #101010;
+    background-blend-mode: initial;
     background-image: url(../images/cropped_header_bw.jpg);
     background-position: center;
     height: 200px;
@@ -442,6 +444,11 @@ nav a:hover:after {
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .contact-button {
+    background-color: #5b40bf;
+  }
 }
 .contact-button:hover {
   -webkit-transform: scale(1.03);
