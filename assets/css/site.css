@@ -114,8 +114,8 @@ ul {
 }
 /* STYLES */
 :root {
-  --overlayColor: #7f0df2;
-  --buttonColor: #407fbf;
+  --overlayColor: #0d7ff2;
+  --buttonColor: #7f0df2;
 }
 body,
 html {
@@ -232,13 +232,23 @@ section {
   margin-bottom: 0.25em;
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-text h1 {
+    line-height: 0.9em;
+  }
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
   .splash-text {
-    font-size: 1.25em;
     position: initial;
     width: auto;
   }
   .splash-text h1 {
     font-size: 4em;
+  }
+  .splash-text p {
+    font-size: 1.125em;
+  }
+  .splash-text a {
+    font-size: 1.25em;
   }
 }
 /* ANIMATION CLASSES */

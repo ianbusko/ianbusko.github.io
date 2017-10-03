@@ -56,8 +56,8 @@ ol, ul {
 
 /* STYLES */
 :root{
-	--overlayColor:hsl(270, 90%, 50%);
-	--buttonColor: hsl(210, 50%, 50%);
+	--overlayColor:hsl(210, 90%, 50%);
+	--buttonColor: hsl(270, 90%, 50%);
 }
 
 body, html{
@@ -163,15 +163,26 @@ section{
 
 	h1{
 		margin-bottom:0.25em;
+
+		@media @phone{
+			line-height: 0.9em;
+		}
 	}
 
 	@media @phone{
-		font-size: 1.25em;
 		position: initial;
 		width:auto;
 
 		h1{
 			font-size: 4em;
+		}
+
+		p{
+			font-size:1.125em;
+		}
+
+		a{
+			font-size:1.25em;
 		}
 	}
 }
