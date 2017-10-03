@@ -96,34 +96,22 @@ section{
 
 .wrapper{
 	background-color:@SlideColor;
-	// box-shadow: 5px 0 10px rgba(0,0,0,.26)
 	@media @smallScreen, @phone{
 		margin-right:0;
 	}
 }
 
 .splash-portrait{
-	// background-color: @black;
 	background-image:url(../images/ian-banner-small-bw.jpg);
 	background-size:cover;
-	// background-blend-mode:multiply;
 	background-blend-mode:lighten;
-
-
 	background-color: var(--overlayColor);
-	// background-blend-mode: screen;
-
-	// filter: grayscale(100%);
 	position:fixed;
 	right:0;
 	top:0;
 	bottom:0;
 	width:25%;
 	z-index: -1;
-
-	@media @largestScreen{
-		background-image: url(../images/ian-banner-small-bw.jpg)
-	}
 
 	@media @phone{
 		background-image: url(../images/cropped_header_bw.jpg);
@@ -133,26 +121,17 @@ section{
 		width:100%;
 	}
 
-	&:before, &:after{
-		content: '';
-		height: 100%;
-		width: 100%;
-		position: absolute;
-	}
-
 	&:after{
 		animation-name: lighten;
 		animation-duration: 2s;
 		animation-timing-function: ease-in-out;
 		background-color: @black;
+		content: '';
+		height: 100%;
+		width: 100%;
 		opacity:0;
+		position: absolute;
 		z-index:1;
-	}
-
-	&:before{
-		opacity:0;
-		// background-color: var(--overlayColor);
-		// background-blend-mode: screen;
 	}
 }
 
@@ -172,7 +151,6 @@ section{
 
 	@media @phone{
 		padding: 2em 1em;
-		// box-shadow: 0 -2px 2px rgba(0,0,0,.26);
 	}
 }
 

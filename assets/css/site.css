@@ -167,14 +167,9 @@ section {
   width: 25%;
   z-index: -1;
 }
-@media only screen and (min-width:1921px) {
-  .splash-portrait {
-    background-image: url(../images/ian-banner.jpg);
-  }
-}
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-portrait {
-    background-image: url(../images/cropped_header.jpg);
+    background-image: url(../images/cropped_header_bw.jpg);
     background-position: center;
     height: 200px;
     position: relative;
@@ -194,6 +189,7 @@ section {
   width: 100%;
   opacity: 0;
   position: absolute;
+  z-index: 1;
 }
 .grid {
   -webkit-align-items: center;
