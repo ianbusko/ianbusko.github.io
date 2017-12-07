@@ -64,7 +64,6 @@
       const hue = baseHue + parseInt((maxHue - baseHue) * (e.clientX / window.innerWidth));
       const buttonHue = maxHue - parseInt((maxHue - baseHue) * (e.clientX / window.innerWidth));
 
-      document.documentElement.style.setProperty(`--overlayColor`, `hsl(${hue}, 90%, 40%)`);
       document.documentElement.style.setProperty('--buttonColor', `hsl(${buttonHue}, 50%, 50%)`);
     }
 
