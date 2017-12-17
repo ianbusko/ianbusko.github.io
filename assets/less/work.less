@@ -46,6 +46,10 @@
   }
 }
 
+.work-details--area{
+  margin: 1em 0;
+}
+
 /* HOVER EFFECT */
 .work-wrapper--work{
   a{
@@ -100,6 +104,17 @@
   }
 }
 
+/* WORK DETAILS OPENING */
+.work-details{
+  overflow:hidden;
+  transition: height 0.2s ease-out;
+
+  &:not(.active){
+    height:0;
+  }
+
+}
+
 /* Styling */
 .section{
   background-color:@LightSwatch;
@@ -107,13 +122,14 @@
 
 .work-wrapper--work{
   a{
-    background-size:cover;uyj\
+    background-size:cover;
     background-repeat: none;
   }
 }
 
 .work-details{
-  padding: 1em 0;
+  // padding: 1em 0;
+  // margin: 1em 0;
 
   & > *:not(:last-child){
     margin-bottom: .5em;

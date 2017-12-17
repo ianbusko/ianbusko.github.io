@@ -304,6 +304,9 @@ h2 {
 .work-wrapper--work p {
   text-align: center;
 }
+.work-details--area {
+  margin: 1em 0;
+}
 /* HOVER EFFECT */
 .work-wrapper--work a {
   position: relative;
@@ -352,6 +355,14 @@ h2 {
   left: 0;
   right: 0;
 }
+/* WORK DETAILS OPENING */
+.work-details {
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+.work-details:not(.active) {
+  height: 0;
+}
 /* Styling */
 .section {
   background-color: #ffffff;
@@ -359,9 +370,6 @@ h2 {
 .work-wrapper--work a {
   background-size: cover;
   background-repeat: none;
-}
-.work-details {
-  padding: 1em 0;
 }
 .work-details > *:not(:last-child) {
   margin-bottom: .5em;

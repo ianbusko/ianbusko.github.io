@@ -65,14 +65,12 @@
             <div class="work-wrapper">
 
               <div class="work-wrapper--work">
-                <a style="background-image:url(/assets/images/ian1.jpg)"></a>
+                <a style="background-image:url(/assets/images/ian1.jpg)" data-details="Elexio"></a>
                 <p>Elexio</p>
-
-                <div class="details"></div>
               </div>
 
               <div class="work-wrapper--work">
-                <a style="background-image:url(/assets/images/ian2.jpg)"></a>
+                <a style="background-image:url(/assets/images/ian2.jpg)" data-details="Listrak"></a>
                 <p>Listrak</p>
               </div>
 
@@ -83,16 +81,31 @@
 
             </div>
 
-            <div class="work-details">
+            <div class="work-details--area">
 
-              <p>Web developer on the core product team of a SaaS email-marketing platform.</p>
-              <ul>
-                <li>Built a Unified Application Framework to centralize data access and break legacy dependencies using a C# class library, .NET Core middleware, and shared ViewComponents. Used the framework for Listrak’s Customer Data Platform.</li>
-                <li>Developed the UI of a drag-and-drop Email Composer using Handlebars.js and JQuery. Reduced the amount of time to design and build an email by 80%.</li>
-                <li>Wrote the back-end rendering engine for the Email Composer using C# and the Handlebars.NET library. Refactored rendering engine to reduce HTML size by 20% which affected 60% of emails sent.</li>
-              </ul>
-              
+                <div class="work-details" id="Details-Elexio" data-details="Elexio">
+
+                  <p>Software developer for a desktop Church-Management Application. Promoted to build a client data import application and own the data-import process.</p>
+                  <ul>
+                    <li>Built a desktop application in C# for marshalling client data from various sources to a common format for bulk import. Saved over 60 hours of monthly developer time and reduced onboarding costs.</li>
+                    <li>Created a mass-texting system using a C# WebAPI to interface with the provider and a scheduled task to queue and throttle messages. Served over 60,000 users and increased application value by $100 per client monthly.</li>
+                  </ul>
+
+                </div>
+
+                <div class="work-details" id="Details-Listrak" data-details="Listrak">
+
+                  <p>Web developer on the core product team of a SaaS email-marketing platform.</p>
+                  <ul>
+                    <li>Built a Unified Application Framework to centralize data access and break legacy dependencies using a C# class library, .NET Core middleware, and shared ViewComponents. Used the framework for Listrak’s Customer Data Platform.</li>
+                    <li>Developed the UI of a drag-and-drop Email Composer using Handlebars.js and JQuery. Reduced the amount of time to design and build an email by 80%.</li>
+                    <li>Wrote the back-end rendering engine for the Email Composer using C# and the Handlebars.NET library. Refactored rendering engine to reduce HTML size by 20% which affected 60% of emails sent.</li>
+                  </ul>
+
+                </div>
+
             </div>
+
 
           </div>
 
@@ -101,6 +114,23 @@
     <footer>
       Copyright Ian Busko 2018
     </footer>
+
+    <script>
+
+      var links = document.querySelectorAll('.work-wrapper--work a');
+      links.forEach(function(val){
+        val.addEventListener('click', function(){
+          document.querySelectorAll('.work-details').forEach(function(el){
+            el.classList.remove('active');
+          });
+          console.log(this.dataset, this.datalist, this.dataset.details);
+          var details = this.dataset.details;
+          document.querySelector('.work-details[data-details="' + details + '"]').classList.add('active');
+        });
+      });
+
+
+    </script>
 
   </body>
 </html>
