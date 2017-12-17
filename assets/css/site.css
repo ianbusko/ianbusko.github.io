@@ -1,8 +1,4 @@
 /* STYLES */
-:root {
-  --overlayColor: #0d7ff2;
-  --buttonColor: #407fbf;
-}
 body,
 html {
   margin: 0;
@@ -46,7 +42,7 @@ section {
   font-weight: bold;
   margin-bottom: .25em;
 }
-@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+@media only screen and (min-width:0px) and (max-width:768px) {
   .media-links {
     text-align: center;
   }
@@ -297,7 +293,6 @@ nav a:hover:after {
 }
 /* CONTACT BUTTON */
 .contact-button {
-  background-color: var(--buttonColor);
   border-radius: 1.5em;
   color: #ffffff;
   display: inline-block;

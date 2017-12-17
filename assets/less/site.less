@@ -1,11 +1,6 @@
 @import (reference) "constants";
 
 /* STYLES */
-:root{
-	--overlayColor:hsl(210, 90%, 50%);
-	--buttonColor: hsl(210, 50%, 50%);
-}
-
 body, html{
   margin:0;
   height:100%;
@@ -62,7 +57,7 @@ section{
 		margin-bottom:.25em;
 	}
 
-	@media @smallScreen, @phone{
+	@media @phone{
 		h2{
 			font-size:1.5em;
 			margin-bottom: 1em;
@@ -250,7 +245,6 @@ nav{
 
 /* CONTACT BUTTON */
 .contact-button{
-	background-color: var(--buttonColor);
 	border-radius: 1.5em;
 	color:@white;
 	display:inline-block;
