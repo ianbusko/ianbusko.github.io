@@ -52,42 +52,6 @@ section{
 	}
 }
 
-.splash-portrait{
-	background-image:url(/assets/images/ian-banner-small-bw.jpg);
-	background-size:cover;
-	background-blend-mode:lighten;
-	background-color: var(--overlayColor);
-	position:fixed;
-	right:0;
-	top:0;
-	bottom:0;
-	width:25%;
-	z-index: -1;
-
-	@media @phone{
-		background-color:@black;
-		background-blend-mode:initial;
-		background-image: url(/assets/images/cropped_header_bw.jpg);
-    background-position: center;
-    height: @mobileImageHeight;
-		position: relative;
-		width:100%;
-	}
-
-	&:after{
-		animation-name: lighten;
-		animation-duration: 2s;
-		animation-timing-function: ease-in-out;
-		background-color: @black;
-		content: '';
-		height: 100%;
-		width: 100%;
-		opacity:0;
-		position: absolute;
-		z-index:1;
-	}
-}
-
 .media-links{
 	text-align: left;
 

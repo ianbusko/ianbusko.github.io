@@ -37,44 +37,6 @@ section {
     margin-right: 0;
   }
 }
-.splash-portrait {
-  background-image: url(/assets/images/ian-banner-small-bw.jpg);
-  background-size: cover;
-  background-blend-mode: lighten;
-  background-color: var(--overlayColor);
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 25%;
-  z-index: -1;
-}
-@media only screen and (min-width:0px) and (max-width:768px) {
-  .splash-portrait {
-    background-color: #101010;
-    background-blend-mode: initial;
-    background-image: url(/assets/images/cropped_header_bw.jpg);
-    background-position: center;
-    height: 200px;
-    position: relative;
-    width: 100%;
-  }
-}
-.splash-portrait:after {
-  -webkit-animation-name: lighten;
-          animation-name: lighten;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  background-color: #101010;
-  content: '';
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  z-index: 1;
-}
 .media-links {
   text-align: left;
 }
