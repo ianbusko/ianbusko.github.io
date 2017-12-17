@@ -12,29 +12,29 @@ var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 var autoprefixPlugin = new LessPluginAutoPrefix({browsers: ["last 2 versions", "iOS 7"]});
 
 gulp.task('default', ['watch']);
-gulp.task('build', function () {
+gulp.task('build:css', function () {
 	return gulp.src('assets/less/*.less')
 		.pipe(less({
             plugins: [autoprefixPlugin],
 			paths: [ path.join(__dirname, 'less','includes')]
 		}))
 		.pipe(gulp.dest('assets/css'))
-        .pipe(browserSync.stream());
+  	.pipe(browserSync.stream());
 });
 
 gulp.task('watch', function(){
-	gulp.watch('assets/less/*.less', ['build', 'minify-css']);
+	gulp.watch('assets/less/*.less', ['build:css', 'minify-css']);
 	return;
 });
 
-gulp.task('minify-css', ['build'], function () {
+gulp.task('minify-css', ['build:css'], function () {
     return gulp.src(['assets/css/*.css', '!assets/css/*.min.css'])
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('serve', ['build', 'minify-css'], function () {
+gulp.task('serve', ['build:css', 'minify-css'], function () {
     var options = {
 				server: {
 					baseDir: './'
@@ -47,5 +47,5 @@ gulp.task('serve', ['build', 'minify-css'], function () {
     };
 
     browserSync(options);
-    gulp.watch('assets/less/*.less', ['build', 'minify-css']);
+    gulp.watch('assets/less/*.less', ['build:css', 'minify-css']);
 });
