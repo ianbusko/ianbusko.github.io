@@ -137,6 +137,7 @@ section {
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-text {
     position: initial;
+    margin-top: 200px;
     width: auto;
   }
   .splash-text h1 {
@@ -144,6 +145,7 @@ section {
   }
   .splash-text p {
     font-size: 1.125em;
+    width: auto;
   }
   .splash-text a {
     font-size: 1.25em;
@@ -158,6 +160,15 @@ section {
   font-weight: bold;
   margin-bottom: .25em;
 }
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .media-links {
+    text-align: center;
+  }
+  .media-links h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+}
 .media-links .media-links-list .media-links-list_item {
   cursor: pointer;
   margin-bottom: .5em;
@@ -167,6 +178,15 @@ section {
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
+}
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .media-links .media-links-list .media-links-list_item {
+    margin-left: 0;
+    margin-bottom: 1.25em;
+  }
+  .media-links .media-links-list .media-links-list_item a {
+    font-size: 1.5em;
+  }
 }
 /* ANIMATION CLASSES */
 .delay {

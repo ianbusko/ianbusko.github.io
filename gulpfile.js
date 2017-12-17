@@ -69,5 +69,5 @@ gulp.task('serve', ['minify:css'], function () {
     };
 
     browserSync(options);
-    gulp.watch('assets/less/*.less', ['build:css']);
+    gulp.watch('assets/less/*.less', ['minify:css']);
 });

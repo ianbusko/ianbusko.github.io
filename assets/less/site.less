@@ -158,6 +158,7 @@ section{
 
 	@media @phone{
 		position: initial;
+		margin-top: @mobileImageHeight;
 		width:auto;
 
 		h1{
@@ -166,6 +167,7 @@ section{
 
 		p{
 			font-size: 1.125em;
+			width:auto;
 		}
 
 		a{
@@ -184,6 +186,15 @@ section{
 		margin-bottom:.25em;
 	}
 
+	@media @smallScreen, @phone{
+		h2{
+			font-size:1.5em;
+			margin-bottom: 1em;
+		}
+
+		text-align:center;
+	}
+
 	.media-links-list{
 		.media-links-list_item{
 			cursor: pointer;
@@ -194,6 +205,15 @@ section{
 				cursor:pointer;
 				font-family: @NormalFont;
 				font-size:1em;
+			}
+
+			@media @smallScreen, @phone{
+				margin-left:0;
+				margin-bottom: 1.25em;
+
+				a{
+					font-size:1.5em;
+				}
 			}
 		}
 	}
