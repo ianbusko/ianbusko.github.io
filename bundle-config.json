@@ -3,6 +3,7 @@
     "filename" : "site",
     "dest" : "./assets/bundles/css",
     "src" : [
+      "./assets/css/overrides.css",
       "./assets/css/site.css"
     ]
   }
