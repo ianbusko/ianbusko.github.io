@@ -389,7 +389,7 @@ nav a:hover:after {
 }
 
 .big-image {
-  background-image: url(/assets/images/splash.jpg);
+  background-image: url(/assets/images/splash_cropped.jpg);
   background-size: cover;
   position: fixed;
   top: 0;
