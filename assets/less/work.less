@@ -1,11 +1,25 @@
 @import (reference) "constants";
 
-.section{
-  background-color:@LightSwatch;
+/* Positioning */
+.section--content{
+  margin:0 auto;
+  max-width:1000px;
 }
 
-.section--content{
-  height:400px;
-  margin:0 auto;
-  max-width:800px;
+.work-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+
+  .work-wrapper--work{
+    background-color:rebeccapurple;
+    height: 400px;
+    flex: 0 0 auto;
+    margin: 1em;
+    width:300px;
+  }
+}
+
+/* Styling */
+.section{
+  background-color:@LightSwatch;
 }
