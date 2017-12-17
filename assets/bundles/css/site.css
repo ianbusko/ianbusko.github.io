@@ -382,6 +382,7 @@ h2 {
   display: list-item;
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
+  line-height: 1.25em;
 }
 .work-details ul li:not(:last-child) {
   margin-bottom: .5em;
