@@ -265,11 +265,13 @@ h2 {
 /* Variables */
 /* Positioning */
 .section {
-  padding: 2em 3em;
+  padding: 0 3em;
 }
 .section--content {
+  border-bottom: 1px solid grey;
   margin: 0 auto;
   max-width: 1000px;
+  padding: 2em 0;
 }
 .section--content > *:not(:last-child) {
   margin-bottom: 1em;
@@ -357,6 +359,24 @@ h2 {
 .work-wrapper--work a {
   background-size: cover;
   background-repeat: none;
+}
+.work-details {
+  padding: 1em 0;
+}
+.work-details > *:not(:last-child) {
+  margin-bottom: .5em;
+}
+.work-details ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+.work-details ul li {
+  display: list-item;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
+.work-details ul li:not(:last-child) {
+  margin-bottom: .5em;
 }
 
 footer {
