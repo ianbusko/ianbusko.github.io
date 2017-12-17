@@ -227,21 +227,23 @@ section{
 }
 
 .add-shadow{
-	position: relative;
+	@media @mediumScreen, @largeScreen{
+		position: relative;
 
-	&:after{
-		.fullsize-pseudo;
-		box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.3);
-		content: '';
-		opacity: 0;
-		will-change: opacity;
-		z-index: -1;
+		&:after{
+			.fullsize-pseudo;
+			box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.3);
+			content: '';
+			opacity: 0;
+			will-change: opacity;
+			z-index: -1;
 
-		animation-name: addShadow;
-		animation-delay: 1.2 * @firstAnimationSpeed;
-		animation-duration:.6s;
-		animation-fill-mode: both;
-		animation-timing-function: ease-in;
+			animation-name: addShadow;
+			animation-delay: 1.2 * @firstAnimationSpeed;
+			animation-duration:.6s;
+			animation-fill-mode: both;
+			animation-timing-function: ease-in;
+		}
 	}
 }
 
