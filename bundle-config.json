@@ -1,0 +1,9 @@
+{
+  "SiteBundle" : {
+    "filename" : "site",
+    "dest" : "./assets/bundles/css",
+    "src" : [
+      "./assets/css/site.css"
+    ]
+  }
+}
