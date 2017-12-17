@@ -407,14 +407,38 @@ nav a:hover:after {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 10%;
-  padding: 1.5rem;
+  margin-top: -1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
   position: absolute;
   top: 20%;
-  width: calc(843px);
+  max-width: calc(843px);
 }
 .splash-text > div {
+  margin-top: 1.5rem;
   width: 420px;
+}
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .splash-text {
+    position: relative;
+    margin: 0 auto;
+    top: 10%;
+    left: auto;
+  }
+  .splash-text > div {
+    width: 420px;
+  }
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-text {
+    top: 5%;
+  }
 }
 .splash-text--column > *:not(:last-child) {
   margin-bottom: 1.25em;
@@ -428,6 +452,7 @@ nav a:hover:after {
   background-color: #FFFFFF;
   text-align: center;
 }
+/* MEDIA LINKS */
 .media-links {
   text-align: left;
 }

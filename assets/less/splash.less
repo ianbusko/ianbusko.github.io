@@ -2,6 +2,7 @@
 
 @columnWidth: 420px;
 @padding: 1.5rem;
+@columnMargin: 1.5rem;
 
 .big-image{
   background-image: url(/assets/images/splash.jpg);
@@ -19,14 +20,33 @@
   align-items:center;
   bottom: auto;
   display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
   left:10%;
-  padding: 1.5rem;
+  margin-top: -1 * @columnMargin;
+  padding: 0 @padding @padding @padding;
   position: absolute;
   top:20%;
-  width:calc(2 * @columnWidth + 2 * @padding);
+  max-width:calc(2 * @columnWidth + 2 * @padding);
 
   & > div {
-    width: 420px;
+    margin-top: @columnMargin;
+    width: @columnWidth;
+  }
+
+  @media @smallScreen, @phone{
+    position: relative;
+    margin: 0 auto;
+    top:10%;
+    left:auto;
+
+    & > div{
+      width: @columnWidth;
+    }
+  }
+
+  @media @phone{
+    top:5%;
   }
 }
 
@@ -47,8 +67,7 @@
   text-align:center;
 }
 
-
-
+/* MEDIA LINKS */
 .media-links{
 	text-align: left;
 
