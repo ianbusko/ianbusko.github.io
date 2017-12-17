@@ -135,7 +135,6 @@ p {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2em;
-  margin-bottom: .25em;
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   h2 {
@@ -272,6 +271,9 @@ h2 {
   margin: 0 auto;
   max-width: 1000px;
 }
+.section--content > *:not(:last-child) {
+  margin-bottom: 1em;
+}
 .work-wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,7 +284,7 @@ h2 {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 -1em;
+  margin: -1em;
 }
 .work-wrapper .work-wrapper--work {
   -webkit-flex: 0 0 auto;
@@ -293,6 +295,7 @@ h2 {
 }
 .work-wrapper--work a {
   background-color: blue;
+  cursor: pointer;
   display: block;
   height: 300px;
   width: 300px;
@@ -300,7 +303,42 @@ h2 {
 .work-wrapper--work p {
   text-align: center;
 }
+/* HOVER EFFECT */
+.work-wrapper--work a {
+  position: relative;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  will-change: transform;
+}
+.work-wrapper--work a:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+.work-wrapper--work a:hover:after {
+  opacity: 0.6;
+}
+.work-wrapper--work a:before,
+.work-wrapper--work a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.work-wrapper--work a:after {
+  content: '';
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  z-index: 2;
+}
 /* Styling */
 .section {
   background-color: #ffffff;
+}
+.work-wrapper--work a {
+  background-size: cover;
+  background-repeat: none;
 }

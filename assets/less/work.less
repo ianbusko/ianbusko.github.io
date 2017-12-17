@@ -12,13 +12,17 @@
 .section--content{
   margin:0 auto;
   max-width:1000px;
+
+  & > *:not(:last-child){
+    margin-bottom:1em;
+  }
 }
 
 .work-wrapper{
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 -1 * @WorkItemMargin;
+  margin: -1 * @WorkItemMargin;
 
   .work-wrapper--work{
     flex: 0 0 auto;
@@ -30,6 +34,7 @@
 .work-wrapper--work{
   a{
     background-color: blue;
+    cursor: pointer;
     display: block;
     height:@WorkItemWidth;
     width:@WorkItemWidth;
@@ -40,7 +45,50 @@
   }
 }
 
+/* HOVER EFFECT */
+.work-wrapper--work{
+  a{
+    position:relative;
+    transition: transform 0.2s ease-in;
+    will-change: transform;
+
+    &:hover{
+      transform: scale(1.05, 1.05);
+      // transition: transform 0.2s ease-in;
+
+      &:after{
+        opacity: 0.6;
+      }
+    }
+
+    &:before, &:after{
+      display:block;
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+    }
+
+    &:after{
+      content: '';
+      background-color: #000000;
+      opacity:0;
+      transition: opacity 0.2s ease-in;
+      z-index:2;
+    }
+  }
+}
+
+
 /* Styling */
 .section{
   background-color:@LightSwatch;
+}
+
+.work-wrapper--work{
+  a{
+    background-size:cover;
+    background-repeat: none;
+  }
 }

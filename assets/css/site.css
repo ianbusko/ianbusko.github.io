@@ -24,7 +24,6 @@ p {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2em;
-  margin-bottom: .25em;
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   h2 {
