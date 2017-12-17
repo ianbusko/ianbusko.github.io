@@ -223,41 +223,6 @@ section {
     padding: 2em 1em;
   }
 }
-.splash-text {
-  -webkit-align-self: baseline;
-      -ms-flex-item-align: baseline;
-          align-self: baseline;
-  position: absolute;
-  bottom: 20%;
-  width: 420px;
-  text-align: center;
-}
-@media only screen and (min-width:0px) and (max-width:768px) {
-  .splash-text h1 {
-    line-height: 0.9em;
-  }
-}
-.splash-text p {
-  font-size: 1.25em;
-  text-align: left;
-}
-@media only screen and (min-width:0px) and (max-width:768px) {
-  .splash-text {
-    position: initial;
-    margin-top: 200px;
-    width: auto;
-  }
-  .splash-text h1 {
-    font-size: 4em;
-  }
-  .splash-text p {
-    font-size: 1.125em;
-    width: auto;
-  }
-  .splash-text a {
-    font-size: 1.25em;
-  }
-}
 .media-links {
   text-align: left;
 }
@@ -552,6 +517,40 @@ nav a:hover:after {
 }
 /* Positioning */
 .splash-text {
+  -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
+  position: absolute;
+  bottom: 20%;
+  width: 420px;
+  text-align: center;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-text h1 {
+    line-height: 0.9em;
+  }
+}
+.splash-text p {
+  font-size: 1.25em;
+  text-align: left;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-text {
+    position: initial;
+    width: auto;
+  }
+  .splash-text h1 {
+    font-size: 4em;
+  }
+  .splash-text p {
+    font-size: 1.125em;
+    width: auto;
+  }
+  .splash-text a {
+    font-size: 1.25em;
+  }
+}
+.splash-text {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -559,6 +558,7 @@ nav a:hover:after {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  left: 10%;
   top: 20%;
   padding: 1.5rem;
   width: calc(843px);
