@@ -1,0 +1,28 @@
+@GridItemMargin: 1em;
+
+.section{
+  padding: 0 3em;
+}
+
+.section--content{
+  border-bottom: 1px solid grey;
+  margin:0 auto;
+  max-width:1000px;
+  padding: 2em 0;
+
+  & > *:not(:last-child){
+    margin-bottom:1em;
+  }
+}
+
+.section-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: -1 * @GridItemMargin;
+
+  & > * {
+    flex: 0 0 auto;
+    margin: @GridItemMargin;
+  }
+}
