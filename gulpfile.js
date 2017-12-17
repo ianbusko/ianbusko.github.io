@@ -50,24 +50,13 @@ gulp.task("minify:css", ['build:css'], function () {
 });
 
 gulp.task('watch', function(){
-	gulp.watch('assets/less/*.less', ['build:css', 'minify-css']);
+	gulp.watch('assets/less/*.less', ['minify:css']);
 	return;
 });
 
-gulp.task('minify-css', ['build:css'], function () {
-    return gulp.src(['assets/css/*.css', '!assets/css/*.min.css'])
-        .pipe(cleanCSS())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('assets/css'));
-});
+gulp.task('build', ['minify:css'], function(){});
 
-gulp.task('build', ['minify:css'], function(){
-
-});
-
-
-
-gulp.task('serve', ['build:css', 'minify:css'], function () {
+gulp.task('serve', ['minify:css'], function () {
     var options = {
 				server: {
 					baseDir: './'
@@ -80,5 +69,5 @@ gulp.task('serve', ['build:css', 'minify:css'], function () {
     };
 
     browserSync(options);
-    gulp.watch('assets/less/*.less', ['build:css', 'minify-css']);
+    gulp.watch('assets/less/*.less', ['build:css']);
 });
