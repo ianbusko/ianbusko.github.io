@@ -132,9 +132,6 @@ p {
   font-size: 1.25em;
   line-height: 1.5em;
 }
-section {
-  height: 100vh;
-}
 /* MIXINS */
 .wrapper {
   background-color: #ffffff;
@@ -157,6 +154,9 @@ section {
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+.splash-section {
+  height: 100vh;
 }
 /* Positioning */
 .splash-text {
@@ -208,8 +208,8 @@ section {
 }
 /* Design */
 .splash-text {
-  border-radius: 4px !important;
   background-color: #ffffff;
+  border-radius: 4px !important;
   text-align: center;
 }
 /* MEDIA LINKS */
@@ -251,3 +251,6 @@ section {
   }
 }
 
+.section {
+  background-color: #ffffff;
+}

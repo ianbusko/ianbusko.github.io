@@ -21,9 +21,6 @@ p {
   font-size: 1.25em;
   line-height: 1.5em;
 }
-section {
-  height: 100vh;
-}
 /* MIXINS */
 .wrapper {
   background-color: #ffffff;
