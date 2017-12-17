@@ -132,6 +132,17 @@ p {
   font-size: 1.25em;
   line-height: 1.5em;
 }
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: .25em;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+}
 /* MIXINS */
 .wrapper {
   background-color: #ffffff;
@@ -252,7 +263,11 @@ p {
   }
 }
 
+/* Variables */
 /* Positioning */
+.section {
+  padding: 2em 3em;
+}
 .section--content {
   margin: 0 auto;
   max-width: 1000px;
@@ -264,15 +279,26 @@ p {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -1em;
 }
 .work-wrapper .work-wrapper--work {
-  background-color: rebeccapurple;
-  height: 400px;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin: 1em;
   width: 300px;
+}
+.work-wrapper--work a {
+  background-color: blue;
+  display: block;
+  height: 300px;
+  width: 300px;
+}
+.work-wrapper--work p {
+  text-align: center;
 }
 /* Styling */
 .section {

@@ -1,6 +1,14 @@
 @import (reference) "constants";
 
+/* Variables */
+@WorkItemMargin: 1em;
+@WorkItemWidth: 300px;
+
 /* Positioning */
+.section{
+  padding: 2em 3em;
+}
+
 .section--content{
   margin:0 auto;
   max-width:1000px;
@@ -9,13 +17,26 @@
 .work-wrapper{
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -1 * @WorkItemMargin;
 
   .work-wrapper--work{
-    background-color:rebeccapurple;
-    height: 400px;
     flex: 0 0 auto;
-    margin: 1em;
-    width:300px;
+    margin: @WorkItemMargin;
+    width:@WorkItemWidth;
+  }
+}
+
+.work-wrapper--work{
+  a{
+    background-color: blue;
+    display: block;
+    height:@WorkItemWidth;
+    width:@WorkItemWidth;
+  }
+
+  p{
+    text-align: center;
   }
 }
 
