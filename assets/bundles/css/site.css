@@ -254,3 +254,8 @@ p {
 .section {
   background-color: #ffffff;
 }
+.section--content {
+  height: 400px;
+  margin: 0 auto;
+  max-width: 800px;
+}
