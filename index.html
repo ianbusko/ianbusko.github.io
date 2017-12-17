@@ -55,21 +55,5 @@
 
     </section>
 
-  <script>
-
-    const baseHue = 220;
-    const maxHue = 270;
-
-    function handleUpdate(e){
-      const hue = baseHue + parseInt((maxHue - baseHue) * (e.clientX / window.innerWidth));
-      const buttonHue = maxHue - parseInt((maxHue - baseHue) * (e.clientX / window.innerWidth));
-
-      document.documentElement.style.setProperty('--buttonColor', `hsl(${buttonHue}, 50%, 50%)`);
-    }
-
-    document.querySelector('body').addEventListener('mousemove', handleUpdate);
-
-  </script>
-
   </body>
 </html>

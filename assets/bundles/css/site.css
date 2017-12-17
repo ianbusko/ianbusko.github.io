@@ -205,14 +205,6 @@ section {
   }
 }
 /* EXTRA STYLES FOR ANIMATION */
-@media only screen and (min-width: 768px) and (max-width:1440px), only screen and (min-width:1441px) {
-  .wrapper {
-    -webkit-transform: translateX(-25%);
-            transform: translateX(-25%);
-    padding-left: 25%;
-    will-change: transform;
-  }
-}
 .splash-portrait:after:after {
   -webkit-animation-name: lighten;
           animation-name: lighten;
