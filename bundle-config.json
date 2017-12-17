@@ -7,6 +7,7 @@
       "./assets/css/site.css",
       "./assets/css/splash.css",
       "./assets/css/work.css",
+      "./assets/css/skills.css",
       "./assets/css/footer.css"
     ]
   }
