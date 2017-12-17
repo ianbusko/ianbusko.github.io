@@ -94,6 +94,16 @@ section{
 	}
 }
 
+/* MIXINS */
+.fullsize-pseudo(){
+	content: '';
+	bottom:0;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
 .wrapper{
 	background-color:@SlideColor;
 	@media @smallScreen, @phone{
@@ -216,6 +226,24 @@ section{
 	animation-timing-function: ease-in;
 }
 
+.add-shadow{
+	position: relative;
+
+	&:after{
+		.fullsize-pseudo;
+		box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.3);
+		content: '';
+		opacity: 0;
+		will-change: opacity;
+
+		animation-name: addShadow;
+		animation-delay: 1.2 * @firstAnimationSpeed;
+		animation-duration:.6s;
+		animation-fill-mode: both;
+		animation-timing-function: ease-in;
+	}
+}
+
 /* EXTRA STYLES FOR ANIMATION */
 .wrapper{
 	@media @mediumScreen, @largeScreen{
@@ -254,6 +282,11 @@ section{
 @keyframes dropDown{
 	0% { transform: translateY(10px); }
 	100% { transform: translateY(0); }
+}
+
+@keyframes addShadow{
+	0% { opacity: 0;}
+	100%{ opacity: 1; }
 }
 
 
