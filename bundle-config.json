@@ -6,7 +6,8 @@
       "./assets/css/overrides.css",
       "./assets/css/site.css",
       "./assets/css/splash.css",
-      "./assets/css/work.css"
+      "./assets/css/work.css",
+      "./assets/css/footer.css"
     ]
   }
 }

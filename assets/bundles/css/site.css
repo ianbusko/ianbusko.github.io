@@ -294,7 +294,6 @@ h2 {
   width: 300px;
 }
 .work-wrapper--work a {
-  background-color: blue;
   cursor: pointer;
   display: block;
   height: 300px;
@@ -318,14 +317,27 @@ h2 {
 .work-wrapper--work a:hover:after {
   opacity: 0.6;
 }
+.work-wrapper--work a:hover:before {
+  opacity: 1;
+}
 .work-wrapper--work a:before,
 .work-wrapper--work a:after {
   display: block;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+}
+.work-wrapper--work a:before {
+  color: #ffffff;
+  content: 'Click for Details';
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-in;
+  will-change: opacity;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 3;
 }
 .work-wrapper--work a:after {
   content: '';
@@ -333,6 +345,10 @@ h2 {
   opacity: 0;
   transition: opacity 0.2s ease-in;
   z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 /* Styling */
 .section {
@@ -341,4 +357,14 @@ h2 {
 .work-wrapper--work a {
   background-size: cover;
   background-repeat: none;
+}
+
+footer {
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  padding: 2em 3em;
+  text-align: center;
+}
+footer p {
+  font-size: 1.25em;
 }

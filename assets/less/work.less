@@ -33,7 +33,6 @@
 
 .work-wrapper--work{
   a{
-    background-color: blue;
     cursor: pointer;
     display: block;
     height:@WorkItemWidth;
@@ -59,15 +58,29 @@
       &:after{
         opacity: 0.6;
       }
+      &:before{
+        opacity: 1;
+      }
     }
 
     &:before, &:after{
       display:block;
       position: absolute;
-      top:0;
-      bottom:0;
-      left:0;
-      right:0;
+
+    }
+
+    &:before{
+      color: @LightSwatch;
+      content: 'Click for Details';
+      font-family: @NormalFont;
+      font-size:1.25em;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease-in;
+      will-change: opacity;
+      top:50%;
+      left:50%;
+      opacity:0;
+      z-index:3;
     }
 
     &:after{
@@ -76,6 +89,11 @@
       opacity:0;
       transition: opacity 0.2s ease-in;
       z-index:2;
+
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
     }
   }
 }
