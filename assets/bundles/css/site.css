@@ -232,9 +232,6 @@ section {
   width: 420px;
   text-align: center;
 }
-.splash-text > * {
-  margin-bottom: 2rem;
-}
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-text h1 {
     line-height: 0.9em;
@@ -243,7 +240,6 @@ section {
 .splash-text p {
   font-size: 1.25em;
   text-align: left;
-  width: 500px;
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-text {
@@ -542,4 +538,39 @@ nav a:hover:after {
 .contact-button:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+
+.big-image {
+  background-image: url(/assets/images/splash.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* Positioning */
+.splash-text {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 20%;
+  padding: 1.5rem;
+  width: calc(843px);
+}
+.splash-text > div {
+  width: 420px;
+}
+.splash-text--column > *:not(:last-child) {
+  margin-bottom: 2em;
+}
+/* Design */
+.splash-text {
+  border-radius: 4px !important;
+  background-color: #FFFFFF;
 }
