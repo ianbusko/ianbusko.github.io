@@ -54,11 +54,6 @@ p{
 
 section{
 	height: 100vh;
-	&.splash-grid{
-		@media @phone{
-			height:calc(~"100vh - @{mobileImageHeight} - @{navbarHeight}");
-		}
-	}
 }
 
 /* MIXINS */
@@ -111,25 +106,6 @@ section{
 		opacity:0;
 		position: absolute;
 		z-index:1;
-	}
-}
-
-.grid{
-  align-items:center;
-	box-sizing: border-box;
-  display:flex;
-  flex-direction: column;
-	justify-content:center;
-	margin:0 auto;
-	max-width:800px;
-	padding-bottom:20%;
-
-	@media @smallScreen, @phone{
-		max-width: 650px;
-	}
-
-	@media @phone{
-		padding: 2em 1em;
 	}
 }
 
