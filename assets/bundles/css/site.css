@@ -144,43 +144,6 @@ section {
     margin-right: 0;
   }
 }
-.media-links {
-  text-align: left;
-}
-.media-links h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: .25em;
-}
-@media only screen and (min-width:0px) and (max-width:768px) {
-  .media-links {
-    text-align: center;
-  }
-  .media-links h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-}
-.media-links .media-links-list .media-links-list_item {
-  cursor: pointer;
-  margin-bottom: .5em;
-  margin-left: 1em;
-}
-.media-links .media-links-list .media-links-list_item a {
-  cursor: pointer;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-}
-@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
-  .media-links .media-links-list .media-links-list_item {
-    margin-left: 0;
-    margin-bottom: 1.25em;
-  }
-  .media-links .media-links-list .media-links-list_item a {
-    font-size: 1.5em;
-  }
-}
 /* ANIMATION CLASSES */
 .delay {
   -webkit-animation-delay: 1.5s;
@@ -464,4 +427,41 @@ nav a:hover:after {
   border-radius: 4px !important;
   background-color: #FFFFFF;
   text-align: center;
+}
+.media-links {
+  text-align: left;
+}
+.media-links h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: .25em;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .media-links {
+    text-align: center;
+  }
+  .media-links h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+.media-links .media-links-list .media-links-list_item {
+  cursor: pointer;
+  margin-bottom: .5em;
+  margin-left: 1em;
+}
+.media-links .media-links-list .media-links-list_item a {
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .media-links .media-links-list .media-links-list_item {
+    margin-left: 0;
+    margin-bottom: 1.25em;
+  }
+  .media-links .media-links-list .media-links-list_item a {
+    font-size: 1.5em;
+  }
 }
