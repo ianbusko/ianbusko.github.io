@@ -230,8 +230,8 @@ section {
   width: 420px;
   text-align: center;
 }
-.splash-text h1 {
-  margin-bottom: 0.25em;
+.splash-text > * {
+  margin-bottom: 2rem;
 }
 @media only screen and (min-width:0px) and (max-width:768px) {
   .splash-text h1 {
