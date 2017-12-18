@@ -281,11 +281,22 @@ h2 {
 .work-wrapper .work-wrapper--work {
   width: 300px;
 }
+@media only screen and (min-width:769px) and (max-width:1200px) {
+  .work-wrapper .work-wrapper--work {
+    width: 195px;
+  }
+}
 .work-wrapper--work a {
   cursor: pointer;
   display: block;
   height: 300px;
   width: 300px;
+}
+@media only screen and (min-width:769px) and (max-width:1200px) {
+  .work-wrapper--work a {
+    height: 195px;
+    width: 195px;
+  }
 }
 .work-wrapper--work p {
   text-align: center;

@@ -2,11 +2,16 @@
 
 /* Variables */
 @WorkItemWidth: 300px;
+@SmallWorkItemWidth: .65 * @WorkItemWidth;
 
 /* Positioning */
 .work-wrapper{
   .work-wrapper--work{
     width:@WorkItemWidth;
+
+    @media @smallScreen{
+      width: @SmallWorkItemWidth;
+    }
   }
 }
 
@@ -16,6 +21,11 @@
     display: block;
     height:@WorkItemWidth;
     width:@WorkItemWidth;
+
+    @media @smallScreen{
+      height: @SmallWorkItemWidth;
+      width: @SmallWorkItemWidth;
+    }
   }
 
   p{
