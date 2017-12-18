@@ -179,9 +179,20 @@ h2 {
   bottom: 0;
   z-index: -1;
 }
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .big-image {
+    height: 400px;
+    position: relative;
+  }
+}
 .splash-section {
   height: 100vh;
   position: relative;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .splash-section {
+    height: auto;
+  }
 }
 /* Positioning */
 .splash-text {
