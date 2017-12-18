@@ -1,10 +1,15 @@
 /* VARIABLES */
 @import (reference) "constants";
 @SkillHeight: 400px;
+@SkillSmallHeight: .8 * @SkillHeight;
 
 /* LAYOUT */
 .skills-wrapper--skill{
   width: @SkillHeight;
+
+  @media @phone{
+    width: @SkillSmallHeight;
+  }
 
   & > *:not(:last-child){
     margin-bottom: 1em;
@@ -14,6 +19,11 @@
 .skills--image{
   height:@SkillHeight;
   width:@SkillHeight;
+
+  @media @phone{
+    height: @SkillSmallHeight;
+    width: @SkillSmallHeight;
+  }
 }
 
 /* STYLING */

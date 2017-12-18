@@ -387,12 +387,23 @@ h2 {
 .skills-wrapper--skill {
   width: 400px;
 }
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skills-wrapper--skill {
+    width: 320px;
+  }
+}
 .skills-wrapper--skill > *:not(:last-child) {
   margin-bottom: 1em;
 }
 .skills--image {
   height: 400px;
   width: 400px;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skills--image {
+    height: 320px;
+    width: 320px;
+  }
 }
 /* STYLING */
 .skills--image {
