@@ -119,6 +119,8 @@ body {
   background-color: #ffffff;
 }
 h1,
+h2,
+h3,
 p {
   color: #101010;
 }
@@ -131,16 +133,6 @@ p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.25em;
   line-height: 1.5em;
-}
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-}
-@media only screen and (min-width:0px) and (max-width:768px) {
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
 }
 /* LIST STYLES */
 .list {
@@ -156,18 +148,6 @@ h2 {
 .list .list--item:not(:last-child) {
   margin-bottom: .5em;
 }
-/* MIXINS */
-.wrapper {
-  background-color: #ffffff;
-}
-@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
-  .wrapper {
-    margin-right: 0;
-  }
-}
-/* ANIMATION CLASSES */
-/* EXTRA STYLES FOR ANIMATION */
-/* CONTACT BUTTON */
 
 .big-image {
   background-image: url(/assets/images/splash_cropped.jpg);
@@ -336,16 +316,6 @@ h2 {
   transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
   will-change: transform;
 }
-.work-wrapper--work a:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-}
-.work-wrapper--work a:hover:after {
-  opacity: 0.6;
-}
-.work-wrapper--work a:hover:before {
-  opacity: 1;
-}
 .work-wrapper--work a:before,
 .work-wrapper--work a:after {
   display: block;
@@ -367,14 +337,25 @@ h2 {
 }
 .work-wrapper--work a:after {
   content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   background-color: #000000;
   opacity: 0;
   transition: opacity 0.2s ease-in;
   z-index: 2;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+}
+.work-wrapper--work a:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+.work-wrapper--work a:hover:after {
+  opacity: 0.6;
+}
+.work-wrapper--work a:hover:before {
+  opacity: 1;
 }
 /* WORK DETAILS OPENING */
 .work-details {
@@ -390,19 +371,6 @@ h2 {
   background-repeat: none;
 }
 .work-details > *:not(:last-child) {
-  margin-bottom: .5em;
-}
-.work-details ul {
-  list-style: disc;
-  padding-left: 40px;
-}
-.work-details ul li {
-  display: list-item;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  line-height: 1.25em;
-}
-.work-details ul li:not(:last-child) {
   margin-bottom: .5em;
 }
 
@@ -534,6 +502,10 @@ h2 {
   .section--h3 {
     font-size: 1.5em;
   }
+}
+.section--header {
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
 }
 .section--content {
   border-bottom: 1px solid #DBDBDB;

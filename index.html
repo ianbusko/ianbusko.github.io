@@ -202,22 +202,5 @@
       Copyright Ian Busko 2018
     </footer>
 
-    <script>
-
-      var links = document.querySelectorAll('.work-wrapper--work a');
-      links.forEach(function(val){
-        val.addEventListener('click', function(){
-          document.querySelectorAll('.work-details').forEach(function(el){
-            el.classList.remove('active');
-          });
-          console.log(this.dataset, this.datalist, this.dataset.details);
-          var details = this.dataset.details;
-          document.querySelector('.work-details[data-details="' + details + '"]').classList.add('active');
-        });
-      });
-
-
-    </script>
-
   </body>
 </html>

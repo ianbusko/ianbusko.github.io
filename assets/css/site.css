@@ -8,6 +8,8 @@ body {
   background-color: #ffffff;
 }
 h1,
+h2,
+h3,
 p {
   color: #101010;
 }
@@ -20,16 +22,6 @@ p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.25em;
   line-height: 1.5em;
-}
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-}
-@media only screen and (min-width:0px) and (max-width:768px) {
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
 }
 /* LIST STYLES */
 .list {
@@ -45,15 +37,3 @@ h2 {
 .list .list--item:not(:last-child) {
   margin-bottom: .5em;
 }
-/* MIXINS */
-.wrapper {
-  background-color: #ffffff;
-}
-@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
-  .wrapper {
-    margin-right: 0;
-  }
-}
-/* ANIMATION CLASSES */
-/* EXTRA STYLES FOR ANIMATION */
-/* CONTACT BUTTON */
