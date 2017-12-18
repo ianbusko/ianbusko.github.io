@@ -187,6 +187,7 @@ h2 {
 }
 .mobile-header-image {
   background-image: url('/assets/images/cropped_header.jpg');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: none;
@@ -437,6 +438,11 @@ h2 {
 .skills--text {
   font-size: 1em;
 }
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skills--text {
+    font-size: 1.25em;
+  }
+}
 .skills--group > *:not(:last-child) {
   margin-bottom: .25em;
 }
@@ -450,7 +456,35 @@ h2 {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   width: 100%;
+}
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .skills--columns {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skills--columns.skills--columns-centered {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skill-column {
+    margin-bottom: 1.25em;
+  }
+}
+@media only screen and (min-width:0px) and (max-width:768px), only screen and (min-width:769px) and (max-width:1200px) {
+  .skill-column {
+    text-align: center;
+  }
 }
 .skill-column .skill-column--header {
   color: #434343;
@@ -460,9 +494,19 @@ h2 {
   line-height: 1.5em;
   margin-bottom: .125em;
 }
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skill-column .skill-column--header {
+    font-size: 1.25em;
+  }
+}
 .skill-column .skill-column--list-item {
   font-family: 'Raleway', sans-serif;
   font-size: .75em;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skill-column .skill-column--list-item {
+    font-size: 1em;
+  }
 }
 .skill-column .skill-column--list-item:not(:last-child) {
   margin-bottom: .25em;
@@ -470,6 +514,11 @@ h2 {
 .skill-column .skill-column--link {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .skill-column .skill-column--link {
+    font-size: 1.5em;
+  }
 }
 
 /* LAYOUT */
@@ -480,6 +529,11 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25em;
   font-weight: 900;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .section--h3 {
+    font-size: 1.5em;
+  }
 }
 .section--content {
   border-bottom: 1px solid #DBDBDB;
