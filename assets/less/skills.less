@@ -1,0 +1,66 @@
+/* VARIABLES */
+@import (reference) "constants";
+@SkillHeight: 400px;
+
+/* LAYOUT */
+.skills-wrapper--skill{
+  width: @SkillHeight;
+
+  & > *:not(:last-child){
+    margin-bottom: 1em;
+  }
+}
+
+.skills--image{
+  height:@SkillHeight;
+  width:@SkillHeight;
+}
+
+/* STYLING */
+.skills--image{
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.skills--text{
+  font-size: 1em;
+}
+
+.skills--group{
+  & > *:not(:last-child){
+    margin-bottom: .25em;
+  }
+}
+
+.skills--columns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+}
+
+.skill-column{
+  .skill-column--header{
+    color:lighten(@BoldFontColor, 20%);
+    font-size:1em;
+    font-family: @BoldFont;
+    font-weight: 900;
+    line-height: 1.5em;
+    margin-bottom: .125em;
+  }
+
+  .skill-column--list-item{
+    font-family: @NormalFont;
+    font-size:.75em;
+
+    &:not(:last-child){
+      margin-bottom: .25em;
+    }
+  }
+
+  .skill-column--link{
+    font-family: @NormalFont;
+    font-size: 1em;
+  }
+}

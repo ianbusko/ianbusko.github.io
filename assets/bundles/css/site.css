@@ -142,6 +142,20 @@ h2 {
     margin-bottom: 1em;
   }
 }
+/* LIST STYLES */
+.list {
+  list-style: disc;
+  padding-left: 40px;
+}
+.list .list--item {
+  display: list-item;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+.list .list--item:not(:last-child) {
+  margin-bottom: .5em;
+}
 /* MIXINS */
 .wrapper {
   background-color: #ffffff;
@@ -336,9 +350,6 @@ h2 {
   height: 0;
 }
 /* Styling */
-.section {
-  background-color: #ffffff;
-}
 .work-wrapper--work a {
   background-size: cover;
   background-repeat: none;
@@ -360,12 +371,73 @@ h2 {
   margin-bottom: .5em;
 }
 
+/* VARIABLES */
+/* LAYOUT */
+.skills-wrapper--skill {
+  width: 400px;
+}
+.skills-wrapper--skill > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+.skills--image {
+  height: 400px;
+  width: 400px;
+}
+/* STYLING */
+.skills--image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.skills--text {
+  font-size: 1em;
+}
+.skills--group > *:not(:last-child) {
+  margin-bottom: .25em;
+}
+.skills--columns {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.skill-column .skill-column--header {
+  color: #434343;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  line-height: 1.5em;
+  margin-bottom: .125em;
+}
+.skill-column .skill-column--list-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: .75em;
+}
+.skill-column .skill-column--list-item:not(:last-child) {
+  margin-bottom: .25em;
+}
+.skill-column .skill-column--link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
 
+/* LAYOUT */
 .section {
   padding: 0 3em;
 }
+.section--h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25em;
+  font-weight: 900;
+}
 .section--content {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #DBDBDB;
   margin: 0 auto;
   max-width: 1000px;
   padding: 2em 0;
@@ -390,6 +462,10 @@ h2 {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin: 1em;
+}
+/* STYLING */
+.section {
+  background-color: #ffffff;
 }
 
 footer {
