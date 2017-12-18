@@ -185,6 +185,18 @@ h2 {
     position: relative;
   }
 }
+.mobile-header-image {
+  background-image: url('/assets/images/cropped_header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+  height: 200px;
+}
+@media only screen and (min-width:0px) and (max-width:768px) {
+  .mobile-header-image {
+    display: block;
+  }
+}
 .splash-section {
   height: 100vh;
   position: relative;
