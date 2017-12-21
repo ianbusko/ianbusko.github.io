@@ -291,6 +291,7 @@ p {
   }
 }
 .work-wrapper--work .work-wrapper--link {
+  background-repeat: no-repeat;
   cursor: pointer;
   display: block;
   height: 300px;
@@ -304,9 +305,21 @@ p {
 }
 .work-wrapper--work .work-wrapper--link.work-wrapper--link_elexio {
   background-color: #101010;
+  background-image: url(/assets/images/elexio-logo.svg);
+  background-position: center center;
+  background-size: 80%;
+}
+.work-wrapper--work .work-wrapper--link.work-wrapper--link_listrak {
+  background-color: white;
+  background-image: url(/assets/images/listrak-logo.png);
+  background-position: center center;
+  background-size: 80%;
 }
 .work-wrapper--work .work-wrapper--link.work-wrapper--link_tnp {
   background-color: #101010;
+  background-image: url(/assets/images/tnp-logo.svg);
+  background-position: center center;
+  background-size: 70%;
 }
 .work-wrapper--work p {
   text-align: center;

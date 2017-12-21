@@ -17,6 +17,7 @@
 
 .work-wrapper--work{
   .work-wrapper--link{
+    background-repeat:no-repeat;
     cursor: pointer;
     display: block;
     height:@WorkItemWidth;
@@ -29,14 +30,23 @@
 
     &.work-wrapper--link_elexio{
       background-color: @black;
+      background-image: url(/assets/images/elexio-logo.svg);
+      background-position: center center;
+      background-size: 80%;
     }
 
     &.work-wrapper--link_listrak{
-
+      background-color: white;
+      background-image: url(/assets/images/listrak-logo.png);
+      background-position: center center;
+      background-size: 80%;
     }
 
     &.work-wrapper--link_tnp{
       background-color: @black;
+      background-image: url(/assets/images/tnp-logo.svg);
+      background-position: center center;
+      background-size: 70%;
     }
   }
 
