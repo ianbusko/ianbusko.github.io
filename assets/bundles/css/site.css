@@ -310,7 +310,7 @@ p {
   background-size: 80%;
 }
 .work-wrapper--work .work-wrapper--link.work-wrapper--link_listrak {
-  background-color: white;
+  background-color: #ffffff;
   background-image: url(/assets/images/listrak-logo.png);
   background-position: center center;
   background-size: 80%;
@@ -371,7 +371,7 @@ p {
           transform: scale(1.05, 1.05);
 }
 .work-wrapper--work a:hover:after {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 .work-wrapper--work a:hover:before {
   opacity: 1;
