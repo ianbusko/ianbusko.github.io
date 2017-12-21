@@ -290,17 +290,23 @@ p {
     width: 195px;
   }
 }
-.work-wrapper--work a {
+.work-wrapper--work .work-wrapper--link {
   cursor: pointer;
   display: block;
   height: 300px;
   width: 300px;
 }
 @media only screen and (min-width:769px) and (max-width:1200px) {
-  .work-wrapper--work a {
+  .work-wrapper--work .work-wrapper--link {
     height: 195px;
     width: 195px;
   }
+}
+.work-wrapper--work .work-wrapper--link.work-wrapper--link_elexio {
+  background-color: #101010;
+}
+.work-wrapper--work .work-wrapper--link.work-wrapper--link_tnp {
+  background-color: #101010;
 }
 .work-wrapper--work p {
   text-align: center;

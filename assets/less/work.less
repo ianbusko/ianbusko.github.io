@@ -16,7 +16,7 @@
 }
 
 .work-wrapper--work{
-  a{
+  .work-wrapper--link{
     cursor: pointer;
     display: block;
     height:@WorkItemWidth;
@@ -25,6 +25,18 @@
     @media @smallScreen{
       height: @SmallWorkItemWidth;
       width: @SmallWorkItemWidth;
+    }
+
+    &.work-wrapper--link_elexio{
+      background-color: @black;
+    }
+
+    &.work-wrapper--link_listrak{
+
+    }
+
+    &.work-wrapper--link_tnp{
+      background-color: @black;
     }
   }
 
