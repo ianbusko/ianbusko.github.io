@@ -282,18 +282,8 @@ p {
 
 /* Variables */
 /* Positioning */
-@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
-  .work-wrapper {
-    display: block;
-  }
-}
 .work-wrapper .work-wrapper--work {
   width: 300px;
-}
-@media only screen and (min-width:769px) and (max-width:1200px) {
-  .work-wrapper .work-wrapper--work {
-    width: 195px;
-  }
 }
 .work-wrapper--work .work-wrapper--link {
   background-repeat: no-repeat;
@@ -301,12 +291,6 @@ p {
   display: block;
   height: 300px;
   width: 300px;
-}
-@media only screen and (min-width:769px) and (max-width:1200px) {
-  .work-wrapper--work .work-wrapper--link {
-    height: 195px;
-    width: 195px;
-  }
 }
 .work-wrapper--work .work-wrapper--link.work-wrapper--link_elexio {
   background-color: #101010;

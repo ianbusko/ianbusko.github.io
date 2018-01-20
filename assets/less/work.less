@@ -2,21 +2,11 @@
 
 /* Variables */
 @WorkItemWidth: 300px;
-@SmallWorkItemWidth: .65 * @WorkItemWidth;
 
 /* Positioning */
 .work-wrapper{
-  @media @smallScreen, @phone{
-    display:block;
-
-  }
-
   .work-wrapper--work{
     width:@WorkItemWidth;
-
-    @media @smallScreen{
-      width: @SmallWorkItemWidth;
-    }
   }
 }
 
@@ -27,11 +17,6 @@
     display: block;
     height:@WorkItemWidth;
     width:@WorkItemWidth;
-
-    @media @smallScreen{
-      height: @SmallWorkItemWidth;
-      width: @SmallWorkItemWidth;
-    }
 
     &.work-wrapper--link_elexio{
       background-color: @black;
@@ -76,7 +61,6 @@
       transform: translate(-50%, -50%);
       transition: opacity 0.2s ease-in;
       will-change: opacity;
-      // bottom:10%;
       top:50%;
       left:50%;
       opacity:0;
