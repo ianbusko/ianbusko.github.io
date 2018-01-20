@@ -48,6 +48,32 @@
   }
 }
 
+.job__close{
+  cursor:pointer;
+  display:block;
+  position:relative;
+  transition: transform 0.3s ease-in;
+  width:20px;
+  height:20px;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height:20px;
+    content: "\D7";
+    font-size: 2em;
+    color: @black;
+    text-align: center;
+  }
+
+  &:hover{
+    transform:scale(1.1);
+  }
+}
+
 /* Animation Transformation Settings */
 .job:after{
   opacity:0;
