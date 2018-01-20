@@ -568,6 +568,7 @@ footer p {
   font-size: 1.25em;
 }
 
+/* Position */
 .job {
   position: fixed;
   left: 0;
@@ -592,20 +593,43 @@ footer p {
   pointer-events: none;
   transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
 }
-.job.job--active:after {
-  opacity: 0.8;
-}
 .job__details {
   background-color: #ffffff;
   border-radius: 4px !important;
   display: block;
   max-width: 800px;
   padding: 1.25em;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
+          transform: translateX(-50%) translateY(-50%) scale(0.6);
   text-align: left;
   z-index: 101;
 }
 .job__details p {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
+}
+/* Animation Transformation Settings */
+.job:after {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.job__details {
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  will-change: transform, opacity;
+}
+/* Animation Transformation */
+.job.job--active {
+  pointer-events: all;
+}
+.job.job--active:after {
+  opacity: 0.8;
+}
+.job.job--active .job__details {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+          transform: translateX(-50%) translateY(-50%) scale(1);
 }
