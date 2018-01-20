@@ -567,3 +567,45 @@ footer {
 footer p {
   font-size: 1.25em;
 }
+
+.job {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 100;
+}
+.job:after {
+  background-color: #101010;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  will-change: opacity;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+.job.job--active:after {
+  opacity: 0.8;
+}
+.job__details {
+  background-color: #ffffff;
+  border-radius: 4px !important;
+  display: block;
+  max-width: 800px;
+  padding: 1.25em;
+  position: relative;
+  text-align: left;
+  z-index: 101;
+}
+.job__details p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
