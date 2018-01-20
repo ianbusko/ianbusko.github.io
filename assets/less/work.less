@@ -6,6 +6,11 @@
 
 /* Positioning */
 .work-wrapper{
+  @media @smallScreen, @phone{
+    display:block;
+
+  }
+
   .work-wrapper--work{
     width:@WorkItemWidth;
 
@@ -76,6 +81,13 @@
       left:50%;
       opacity:0;
       z-index:3;
+    }
+
+    @media @smallScreen{
+      &:before{
+        width:75%;
+        text-align:center;
+      }
     }
 
     &:after{

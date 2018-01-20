@@ -282,6 +282,11 @@ p {
 
 /* Variables */
 /* Positioning */
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .work-wrapper {
+    display: block;
+  }
+}
 .work-wrapper .work-wrapper--work {
   width: 300px;
 }
@@ -347,6 +352,12 @@ p {
   left: 50%;
   opacity: 0;
   z-index: 3;
+}
+@media only screen and (min-width:769px) and (max-width:1200px) {
+  .work-wrapper--work .work-wrapper--link:before {
+    width: 75%;
+    text-align: center;
+  }
 }
 .work-wrapper--work .work-wrapper--link:after {
   content: '';
@@ -535,6 +546,15 @@ p {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin: 1em;
+}
+@media only screen and (min-width:769px) and (max-width:1200px), only screen and (min-width:0px) and (max-width:768px) {
+  .section-wrapper {
+    display: block;
+    padding: 1em 0;
+  }
+  .section-wrapper > * {
+    margin: 0 auto;
+  }
 }
 /* STYLING */
 .section {
