@@ -50,13 +50,12 @@
     }
   }
 
-  p{
-    text-align: center;
+  .work-wrapper--label{
+    text-align:center;
   }
-}
-
-.work-details--area{
-  margin: 1em 0;
+  // p{
+  //   text-align: center;
+  // }
 }
 
 /* HOVER EFFECT */
@@ -107,26 +106,10 @@
   }
 }
 
-/* WORK DETAILS OPENING */
-.work-details{
-  overflow:hidden;
-  transition: height 0.2s ease-out;
-
-  &:not(.active){
-    height:0;
-  }
-}
-
 /* Styling */
 .work-wrapper--work{
   a{
     background-size: cover;
     background-repeat: none;
-  }
-}
-
-.work-details{
-  & > *:not(:last-child){
-    margin-bottom: .5em;
   }
 }

@@ -321,11 +321,8 @@ p {
   background-position: center center;
   background-size: 70%;
 }
-.work-wrapper--work p {
+.work-wrapper--work .work-wrapper--label {
   text-align: center;
-}
-.work-details--area {
-  margin: 1em 0;
 }
 /* HOVER EFFECT */
 .work-wrapper--work .work-wrapper--link {
@@ -376,21 +373,10 @@ p {
 .work-wrapper--work .work-wrapper--link:hover:before {
   opacity: 1;
 }
-/* WORK DETAILS OPENING */
-.work-details {
-  overflow: hidden;
-  transition: height 0.2s ease-out;
-}
-.work-details:not(.active) {
-  height: 0;
-}
 /* Styling */
 .work-wrapper--work a {
   background-size: cover;
   background-repeat: none;
-}
-.work-details > *:not(:last-child) {
-  margin-bottom: .5em;
 }
 
 /* VARIABLES */
@@ -593,27 +579,35 @@ footer p {
   pointer-events: none;
   transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
 }
-.job__details {
-  background-color: #ffffff;
-  border-radius: 4px !important;
-  display: block;
+.job .job__details {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 768px;
   max-width: 800px;
-  padding: 1.25em;
+  padding: 2em;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
           transform: translateX(-50%) translateY(-50%) scale(0.6);
-  text-align: left;
   z-index: 101;
 }
-.job__details p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
+.job .job__details > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+.job .job__details > .job__close {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 .job__close {
   cursor: pointer;
   display: block;
+  line-height: 20px;
   position: relative;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
@@ -627,7 +621,6 @@ footer p {
   bottom: 0;
   left: 0;
   right: 0;
-  line-height: 20px;
   content: "\D7";
   font-size: 2em;
   color: #101010;
@@ -658,4 +651,28 @@ footer p {
   opacity: 1;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
           transform: translateX(-50%) translateY(-50%) scale(1);
+}
+/* Styling */
+.job__details {
+  background-color: #ffffff;
+  border-radius: 4px !important;
+}
+.job__name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.job__text {
+  font-size: 1em;
+  text-align: left;
+}
+.job__list {
+  list-style: disc;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  line-height: 1.25em;
+  margin-left: 1em;
+}
+.job__list > *:not(:last-child) {
+  margin-bottom: 0.5em;
 }
