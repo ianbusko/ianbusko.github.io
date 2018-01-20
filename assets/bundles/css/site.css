@@ -321,9 +321,6 @@ p {
   background-position: center center;
   background-size: 70%;
 }
-.work-wrapper--work .work-wrapper--label {
-  text-align: center;
-}
 /* HOVER EFFECT */
 .work-wrapper--work .work-wrapper--link {
   position: relative;
