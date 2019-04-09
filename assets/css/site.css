@@ -1,0 +1,13 @@
+body {
+  font-family: 'Roboto' ,sans-serif;
+}
+
+main {
+  margin: auto;
+  max-width: 38rem;
+  padding: 1.5rem;
+}
+
+header, section{
+  margin-bottom: 2rem;
+}
