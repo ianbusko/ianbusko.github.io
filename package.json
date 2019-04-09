@@ -1,11 +1,9 @@
 {
   "name": "ianbusko.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Ian Busko's personal website",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ianbusko/ianbusko.github.io.git"
@@ -19,16 +17,5 @@
   "keywords": [
     "Ian",
     "Busko"
-  ],
-  "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.3",
-    "gulp-concat": "^2.6.1",
-    "gulp-less": "^3.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-watch": "^4.3.10",
-    "less": "^2.7.1",
-    "less-plugin-autoprefix": "^1.5.1"
-  }
+  ]
 }
